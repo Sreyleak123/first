@@ -20,6 +20,7 @@ namespace test1.Controllers
             return View();
         }
         // Different name
+        [ActionName("Info")]
         public ActionResult showInfo()
         {
             return View("show");
@@ -30,6 +31,7 @@ namespace test1.Controllers
             return View("Details");
         }
         // different control
+        //[HttpPost]
         public ActionResult showMoreDetail()
         {
             return View("~/views/about/Index.cshtml");
