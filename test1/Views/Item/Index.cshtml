@@ -1,7 +1,32 @@
 ﻿
+@using test1.Models
+@model IEnumerable<Itemlist>
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Index List";
 }
 
 <h2>Index</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th> 
+            <th>name</th>
+            <th>Price</th>
+            <th>Category</th>
+        </tr>
+    </thead>
 
+    <tbody>
+        @foreach(var data in Model)
+            {
+                <tr>
+
+                    <td>@data.Id</td>
+                    <td>@data.Name</td>
+                    <td>@data.price</td>
+                    <td>@data.Category</td>
+                </tr>
+            }
+    </tbody>
+</table>
